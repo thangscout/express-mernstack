@@ -7,19 +7,22 @@ class Calcu {
 
     _getStringCal(){
         const { calcu, numberA, numberB} = this;
-        if(calcu ==='SUM')
+        if(calcu ==='SUM'){
             return `${numberA} + ${numberB}`;
-        if(calcu ==='SUB')
+        }
+        if(calcu ==='SUB'){
             return `${numberA} - ${numberB}`;
-        if(calcu ==='MUL')
+        }
+        if(calcu ==='MUL'){
             return `${numberA} * ${numberB}`;
+        }
         return `${numberA} / ${numberB}`;
     }
 
     _getResultCal(){
         const calcuString = this._getStringCal();
         const result = eval(calcuString);
-        return `${calcuString} = ${result}`
+        return `${calcuString} = ${result}`;
     }
 }
 
